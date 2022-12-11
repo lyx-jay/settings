@@ -1,0 +1,204 @@
+{
+  // editor
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira COde, Consolas, 'Courier New', monospace",
+  "editor.minimap.enabled": false,
+  "editor.lightbulb.enabled": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  // bracket
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.matchBrackets": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.autoClosingDelete": "always",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  "editor.cursorSmoothCaretAnimation": true,
+  "window.nativeTabs": true,
+  // workbench
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Vitesse Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.localHistory.enabled": true,
+  "workbench.list.smoothScrolling": true,
+  // terminal
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "git Bash",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "git Bash": {
+      "path": "E:\\Git\\bin\\bash.exe"
+    }
+  },
+  // extensions{}
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "z",
+        "z",
+      ],
+      "commands": [
+        "editor.toggleFold"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "[",
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "]",
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "open-in-browser.default": "chrome",
+  "explorer.confirmDelete": false,
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.renderSideBySide": false,
+  "codetime.statusBarInfo": "total",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "css.format.enable": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    "DEBUG:",
+    "REVIEW:",
+    {
+      "text": "NOTE:",
+      "color": "#ffffff",
+      "backgroundColor": "#2a9d8f",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "HACK:",
+      "color": "#000",
+      "isWholeLine": false,
+    },
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "#b5838d",
+      //other styling properties goes here ... 
+    },
+    {
+      "text": "FIX",
+      "color": "red",
+      "backgroundColor": "skyblue"
+    }
+  ],
+  "todohighlight.defaultStyle": {
+    "color": "red",
+    "backgroundColor": "#ffab00",
+    "overviewRulerColor": "#ffab00",
+    "cursor": "pointer",
+    "border": "1px solid #eee",
+    "borderRadius": "2px",
+    "isWholeLine": true,
+    //other styling properties goes here ... 
+  },
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+  "todohighlight.maxFilesForSearch": 5120,
+  "todohighlight.toggleURI": false,
+  "workbench.sideBar.location": "right",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "typeChallenges.workspaceFolder": "/Users/yxl/.typeChallenges"
+}
