@@ -1,0 +1,3 @@
+# settings
+
+This is my vscode settings including theme, extensions, keyboard shortcuts...
