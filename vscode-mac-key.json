@@ -1,7 +1,7 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
   {
-    "key": "shift+cmd+'",
+    "key": "option+m",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
