@@ -164,6 +164,17 @@
       ]
     }
     ],
+  // vim visual mode key setting
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": [
+        "p"
+      ],
+      "after": [
+        "P"
+      ]
+    }
+  ],
     "open-in-browser.default": "chrome",
     "explorer.confirmDelete": false,
     "[vue]": {
