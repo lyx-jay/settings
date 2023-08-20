@@ -103,6 +103,7 @@
         "editor.action.marker.nextInFiles"
       ]
     },
+<<<<<<< HEAD
     {
       "before": [
         "m",
@@ -175,6 +176,18 @@
       ]
     }
   ],
+=======
+  ],
+  // vim 模式下使用 vsccode 原生的复制、粘贴、剪切、唤起终端
+  "vim.handleKeys": {
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false,
+    "<C-j>": false
+  },
+>>>>>>> f415be5 (feat(win): update windows vscode settings)
   "open-in-browser.default": "chrome",
   "explorer.confirmDelete": false,
   "[vue]": {
