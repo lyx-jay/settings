@@ -1,6 +1,6 @@
 {
   // editor
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.tabSize": 2,
   "editor.fontLigatures": true,
   "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
@@ -19,13 +19,13 @@
   "editor.autoClosingDelete": "always",
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
   },
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "window.nativeTabs": true,
   // workbench
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Vitesse Dark Soft",
   "workbench.iconTheme": "vscode-icons",
   "workbench.localHistory.enabled": true,
   "workbench.list.smoothScrolling": true,
@@ -60,6 +60,46 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
+    },
     {
       "before": [
         "H"
@@ -103,7 +143,6 @@
         "editor.action.marker.nextInFiles"
       ]
     },
-<<<<<<< HEAD
     {
       "before": [
         "m",
@@ -176,8 +215,7 @@
       ]
     }
   ],
-=======
-  ],
+
   // vim 模式下使用 vsccode 原生的复制、粘贴、剪切、唤起终端
   "vim.handleKeys": {
     "<C-s>": false,
@@ -185,19 +223,22 @@
     "<C-c>": false,
     "<C-v>": false,
     "<C-x>": false,
-    "<C-j>": false
+    "<C-j>": false,
+    "<C-b>": false,
+    "<C-f>": false,
+    "<C-k>": false,
+    "<C-r>": false,
+    "<C-n>": false
   },
->>>>>>> f415be5 (feat(win): update windows vscode settings)
-  "open-in-browser.default": "chrome",
+
   "explorer.confirmDelete": false,
-  "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
-  },
+  // "[vue]": {
+  //   "editor.defaultFormatter": "Vue.volar"
+  // },
   "liveServer.settings.donotShowInfoMsg": true,
   "vsicons.dontShowNewVersionMessage": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "diffEditor.renderSideBySide": false,
-  "codetime.statusBarInfo": "total",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
@@ -270,5 +311,42 @@
   "todohighlight.toggleURI": false,
   "workbench.sideBar.location": "right",
   "terminal.integrated.cursorBlinking": true,
-  "vim.useCtrlKeys": false
+  "vim.leader": "<space>",
+  "diffEditor.ignoreTrimWhitespace": false,
+  // "vim.searchMatchColor": "#588157",
+  // "vim.searchMatchTextColor": "#bb3e03",
+  "vim.hlsearch": true,
+  // eslint
+  "eslint.run": "onType",
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  // "eslint.options": {
+  //   "extension": [
+  //     ".js",
+  //     ".vue",
+  //     ".ts",
+  //     ".tsx"
+  //   ]
+  // },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "vim.foldfix": true,
+  "typeChallenges.workspaceFolder": "C:\\Users\\admin\\.typeChallenges",
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.lineNumbers": "relative",
+  "editor.lineHeight": 1.5,
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.ignoreRecommendations": true,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.env.windows": {},
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false
 }
