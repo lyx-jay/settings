@@ -3,6 +3,9 @@
 background-opacity = 0.85
 background-blur-radius = 20
 
+# 解决 SSH 连接后终端类型不识别的问题
+term = xterm-256color
+
 
 
 # cmd+m 切换侧边栏/快速终端
