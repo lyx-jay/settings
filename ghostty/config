@@ -1,0 +1,53 @@
+# Ghostty 快捷键配置
+# 参照 VSCode 习惯定制
+background-opacity = 0.85
+background-blur-radius = 20
+
+
+
+# cmd+m 切换侧边栏/快速终端
+keybind = super+m=toggle_quick_terminal
+
+# cmd+; 新建垂直分屏 (VSCode: newGroupRight)
+keybind = super+;=new_split:right
+
+# cmd+d 新建水平分屏 (VSCode 习惯)
+keybind = super+d=new_split:down
+
+# cmd+w 关闭当前分屏/标签 (VSCode 习惯)
+keybind = super+w=close_surface
+
+# cmd+[ / ] 在分屏间切换 (VSCode 习惯)
+keybind = super+]=goto_split:next
+keybind = super+[=goto_split:previous
+
+# cmd+t 新建标签页
+keybind = super+t=new_tab
+
+# cmd+n 新建窗口
+keybind = super+n=new_window
+
+# cmd+shift+数字 切换标签页 (避免与全局软件冲突)
+keybind = super+shift+1=goto_tab:1
+keybind = super+shift+2=goto_tab:2
+keybind = super+shift+3=goto_tab:3
+keybind = super+shift+4=goto_tab:4
+keybind = super+shift+5=goto_tab:5
+keybind = super+shift+6=goto_tab:6
+keybind = super+shift+7=goto_tab:7
+keybind = super+shift+8=goto_tab:8
+keybind = super+shift+9=last_tab
+
+# cmd+k 清除屏幕 (VSCode: cmd+k cmd+c 清屏变种)
+keybind = super+k=clear_screen
+
+# cmd+f 搜索
+keybind = super+f=start_search
+
+# cmd+shift+f 搜索上一个
+keybind = super+shift+f=start_search
+
+# 调整字体大小
+keybind = super+==increase_font_size:1
+keybind = super+-=decrease_font_size:1
+keybind = super+0=reset_font_size
