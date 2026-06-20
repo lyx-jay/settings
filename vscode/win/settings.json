@@ -1,0 +1,352 @@
+{
+  // editor
+  "editor.fontSize": 18,
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+  "editor.lightbulb.enabled": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  // bracket
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.matchBrackets": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.autoClosingDelete": "always",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "window.nativeTabs": true,
+  // workbench
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.localHistory.enabled": true,
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.defaultProfile.windows": "git Bash",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "git Bash": {
+      "path": "D:\\Git\\bin\\bash.exe"
+    }
+  },
+  // extensions{}
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "z",
+        "z",
+      ],
+      "commands": [
+        "editor.toggleFold"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "[",
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "]",
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    },
+    {
+      "before": [
+        "m",
+        "a"
+      ],
+      "after": [
+        "m",
+        "A"
+      ]
+    },
+    {
+      "before": [
+        "'",
+        "a"
+      ],
+      "after": [
+        "'",
+        "A"
+      ]
+    },
+    {
+      "before": [
+        "m",
+        "s"
+      ],
+      "after": [
+        "m",
+        "S"
+      ]
+    },
+    {
+      "before": [
+        "'",
+        "s"
+      ],
+      "after": [
+        "'",
+        "S"
+      ]
+    },
+    {
+      "before": [
+        "m",
+        "d"
+      ],
+      "after": [
+        "m",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "'",
+        "d"
+      ],
+      "after": [
+        "'",
+        "D"
+      ]
+    }
+  ],
+  // vim visual mode key setting
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": [
+        "p"
+      ],
+      "after": [
+        "P"
+      ]
+    }
+  ],
+
+  // vim 模式下使用 vsccode 原生的复制、粘贴、剪切、唤起终端
+  "vim.handleKeys": {
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false,
+    "<C-j>": false,
+    "<C-b>": false,
+    "<C-f>": false,
+    "<C-k>": false,
+    "<C-r>": false,
+    "<C-n>": false
+  },
+
+  "explorer.confirmDelete": false,
+  // "[vue]": {
+  //   "editor.defaultFormatter": "Vue.volar"
+  // },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.renderSideBySide": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "css.format.enable": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    "DEBUG:",
+    "REVIEW:",
+    {
+      "text": "NOTE:",
+      "color": "#ffffff",
+      "backgroundColor": "#2a9d8f",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "HACK:",
+      "color": "#000",
+      "isWholeLine": false,
+    },
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "#b5838d",
+      //other styling properties goes here ... 
+    },
+    {
+      "text": "FIX",
+      "color": "red",
+      "backgroundColor": "skyblue"
+    }
+  ],
+  "todohighlight.defaultStyle": {
+    "color": "red",
+    "backgroundColor": "#ffab00",
+    "overviewRulerColor": "#ffab00",
+    "cursor": "pointer",
+    "border": "1px solid #eee",
+    "borderRadius": "2px",
+    "isWholeLine": true,
+    //other styling properties goes here ... 
+  },
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+  "todohighlight.maxFilesForSearch": 5120,
+  "todohighlight.toggleURI": false,
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.cursorBlinking": true,
+  "vim.leader": "<space>",
+  "diffEditor.ignoreTrimWhitespace": false,
+  // "vim.searchMatchColor": "#588157",
+  // "vim.searchMatchTextColor": "#bb3e03",
+  "vim.hlsearch": true,
+  // eslint
+  "eslint.run": "onType",
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  // "eslint.options": {
+  //   "extension": [
+  //     ".js",
+  //     ".vue",
+  //     ".ts",
+  //     ".tsx"
+  //   ]
+  // },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "vim.foldfix": true,
+  "typeChallenges.workspaceFolder": "C:\\Users\\admin\\.typeChallenges",
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.lineNumbers": "relative",
+  "editor.lineHeight": 1.5,
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.ignoreRecommendations": true,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.env.windows": {},
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false
+}

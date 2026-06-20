@@ -1,26 +1,43 @@
 # settings
 
-This is my vscode settings including theme, extensions, keyboard shortcuts...
+个人开发环境配置仓库
 
-- [vscode-mac](https://github.com/lyx-jay/settings/blob/main/vscode-mac.json)
-- [vscode-mac-key](https://github.com/lyx-jay/settings/blob/main/vscode-mac-key.json)
-- [vscode-win](https://github.com/lyx-jay/settings/blob/main/vscode-win.json)
-- [vscode-win-key](https://github.com/lyx-jay/settings/blob/main/vscode-win-key.json)
+## 目录结构
 
-## 一键安装 (macOS)
-
-```bash
-curl -sL https://raw.githubusercontent.com/lyx-jay/settings/main/install.sh | bash
+```
+settings/
+├── vscode/
+│   ├── mac/              # macOS 版本
+│   │   ├── settings.json
+│   │   └── keybindings.json
+│   └── win/              # Windows 版本
+│       ├── settings.json
+│       └── keybindings.json
+├── ghostty/
+│   └── config            # Ghostty 终端配置
+├── install.sh            # 一键安装脚本 (macOS)
+└── README.md
 ```
 
-或手动安装：
+## 安装 (macOS)
 
 ```bash
-git clone https://github.com/lyx-jay/settings.git ~/.settings && cp ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+git clone https://github.com/lyx-jay/settings.git ~/.settings
+```
 
-## Ghostty 配置说明
+使用方式：
 
-配置文件位于 `ghostty/config`，主要快捷键：
+```bash
+bash ~/.settings/install.sh              # 安装全部配置
+bash ~/.settings/install.sh --ghostty    # 仅安装 Ghostty
+bash ~/.settings/install.sh --vscode     # 仅安装 VSCode
+```
+
+配置文件位置：
+- Ghostty: `~/.config/ghostty/config`
+- VSCode: `~/Library/Application Support/Code/User/`
+
+## Ghostty 快捷键
 
 | 快捷键 | 功能 |
 |--------|------|
@@ -34,4 +51,4 @@ git clone https://github.com/lyx-jay/settings.git ~/.settings && cp ghostty/conf
 | `⌘+⇧+数字` | 切换标签页 |
 | `⌘+k` | 清屏 |
 | `⌘+f` | 搜索 |
-| `⌘++` / `⌘+-` | 调整字体大小 |
+| `⌘++` / `⌘+-` | 调整字体大小
