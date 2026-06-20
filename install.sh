@@ -11,6 +11,7 @@ usage() {
     echo "选项:"
     echo "  --ghostty    仅安装 Ghostty 配置"
     echo "  --vscode     仅安装 VSCode 配置"
+    echo "  --nvim       仅安装 Neovim 配置"
     echo "  (无参数)     安装全部配置"
     exit 0
 }
@@ -33,10 +34,22 @@ install_vscode() {
     fi
 }
 
+install_nvim() {
+    NVIM_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
+    if [ -d "$NVIM_DIR" ]; then
+        echo "⚠ Neovim 配置目录已存在: $NVIM_DIR"
+        echo "  跳过安装，如需覆盖请手动删除后重试"
+    else
+        ln -sf "$SCRIPT_DIR/nvim" "$NVIM_DIR"
+        echo "✓ Neovim 配置已链接到 $NVIM_DIR"
+    fi
+}
+
 # 无参数时安装全部
 if [ $# -eq 0 ]; then
     install_ghostty
     install_vscode
+    install_nvim
     echo "安装完成!"
     exit 0
 fi
@@ -46,6 +59,7 @@ for arg in "$@"; do
     case $arg in
         --ghostty) install_ghostty ;;
         --vscode)  install_vscode ;;
+        --nvim)    install_nvim ;;
         --help|-h) usage ;;
         *) echo "未知参数: $arg"; usage ;;
     esac
