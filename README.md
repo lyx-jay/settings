@@ -110,9 +110,33 @@ bash ~/.settings/install.sh --nvim       # 仅安装 Neovim
 | `<leader>fm` | 格式化文件 |
 | `<leader>z` | 切换折叠/展开 |
 
+### 搜索
+
+| 快捷键 | 功能 |
+|--------|------|
+| `<leader>sg` | 全局搜索（需安装 ripgrep） |
+
 ### 终端
 
 | 快捷键 | 功能 |
 |--------|------|
 | `<leader>t` | 打开/关闭浮动终端 |
 | `<C-x>` | 退出终端模式 |
+
+### OpenCode (AI 编码助手)
+
+| 快捷键 | 功能 |
+|--------|------|
+| `<leader>oa` | 向 OpenCode 提问 |
+| `<leader>os` | 打开 OpenCode 选择菜单 |
+| `Ctrl + .` | 切换 OpenCode 侧边栏 |
+
+## 依赖
+
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - 全局搜索（Telescope 依赖）
+- [opencode](https://opencode.ai/) - AI 编码助手
+
+安装依赖：
+```bash
+./install.sh --deps
+```
