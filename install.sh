@@ -12,8 +12,19 @@ usage() {
     echo "  --ghostty    仅安装 Ghostty 配置"
     echo "  --vscode     仅安装 VSCode 配置"
     echo "  --nvim       仅安装 Neovim 配置"
+    echo "  --deps       仅安装依赖"
     echo "  (无参数)     安装全部配置"
     exit 0
+}
+
+install_deps() {
+    echo "检查依赖..."
+    if ! command -v rg &> /dev/null; then
+        echo "安装 ripgrep..."
+        brew install ripgrep
+    else
+        echo "✓ ripgrep 已安装"
+    fi
 }
 
 install_ghostty() {
@@ -47,6 +58,7 @@ install_nvim() {
 
 # 无参数时安装全部
 if [ $# -eq 0 ]; then
+    install_deps
     install_ghostty
     install_vscode
     install_nvim
@@ -57,6 +69,7 @@ fi
 # 解析参数
 for arg in "$@"; do
     case $arg in
+        --deps)    install_deps ;;
         --ghostty) install_ghostty ;;
         --vscode)  install_vscode ;;
         --nvim)    install_nvim ;;
