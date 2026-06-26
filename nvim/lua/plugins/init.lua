@@ -71,6 +71,12 @@ return {
       },
       view = {
         width = 30,
+        mappings = {
+          list = {
+            { key = "l", action = "edit" },
+            { key = "o", action = "edit" },
+          },
+        },
       },
     },
   },
