@@ -42,12 +42,22 @@ map("n", "<leader>t", function()
 end, { desc = "Toggle float terminal" })
 map("t", "<C-x>", "<C-\\><C-N>", { desc = "Exit terminal mode" })
 
--- Telescope
-map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
-map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
-map("n", "<leader>sg", "<cmd>Telescope live_grep<CR>", { desc = "Search grep" })
-map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
-map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Help tags" })
+-- Snacks Picker (replaces Telescope)
+map("n", "<leader>ff", function() Snacks.picker.files() end, { desc = "Find files" })
+map("n", "<leader>fg", function() Snacks.picker.grep() end, { desc = "Live grep" })
+map("n", "<leader>sg", function() Snacks.picker.grep() end, { desc = "Search grep" })
+map("n", "<leader>fb", function() Snacks.picker.buffers() end, { desc = "Find buffers" })
+map("n", "<leader>fh", function() Snacks.picker.help() end, { desc = "Help tags" })
+map({ "n", "x" }, "<leader>sw", function() Snacks.picker.grep_word() end, { desc = "Search word under cursor" })
+map("n", "<C-LeftMouse>", function()
+  local word = vim.fn.expand("<cword>")
+  if word ~= "" then
+    Snacks.picker.grep({ search = word })
+  end
+end, { desc = "Search word under cursor via mouse" })
+
+-- Git
+map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 
 -- NvimTree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file tree" })

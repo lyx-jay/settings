@@ -71,13 +71,16 @@ return {
       },
       view = {
         width = 30,
-        mappings = {
-          list = {
-            { key = "l", action = "edit" },
-            { key = "o", action = "edit" },
-          },
-        },
       },
+      on_attach = function(bufnr)
+        local api = require("nvim-tree.api")
+        local opts = function(desc)
+          return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        end
+        vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
+        vim.keymap.set("n", "o", api.node.open.edit, opts("Open"))
+        vim.keymap.set("n", "<CR>", api.node.open.edit, opts("Open"))
+      end,
     },
   },
 

@@ -12,6 +12,7 @@ usage() {
     echo "  --ghostty    仅安装 Ghostty 配置"
     echo "  --vscode     仅安装 VSCode 配置"
     echo "  --nvim       仅安装 Neovim 配置"
+    echo "  --zsh        仅安装 Zsh 配置"
     echo "  --deps       仅安装依赖"
     echo "  (无参数)     安装全部配置"
     exit 0
@@ -56,12 +57,19 @@ install_nvim() {
     fi
 }
 
+install_zsh() {
+    cp -f "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc"
+    cp -f "$SCRIPT_DIR/zsh/.bash_git" "$HOME/.bash_git"
+    echo "✓ Zsh 配置已安装"
+}
+
 # 无参数时安装全部
 if [ $# -eq 0 ]; then
     install_deps
     install_ghostty
     install_vscode
     install_nvim
+    install_zsh
     echo "安装完成!"
     exit 0
 fi
@@ -73,6 +81,7 @@ for arg in "$@"; do
         --ghostty) install_ghostty ;;
         --vscode)  install_vscode ;;
         --nvim)    install_nvim ;;
+        --zsh)     install_zsh ;;
         --help|-h) usage ;;
         *) echo "未知参数: $arg"; usage ;;
     esac
